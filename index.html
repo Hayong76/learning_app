@@ -5,12 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Course Dashboard</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        html, body {
+            height: 100%;
             margin: 0;
             padding: 0;
             background-color: #f4f4f9;
-            overflow-x: hidden; /* Prevent horizontal overflow */
+            overflow: hidden; /* Prevent scrolling */
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
         }
 
         .header {
@@ -20,12 +26,16 @@
             padding: 1rem;
             font-size: 1.5rem;
             font-weight: bold;
+            flex-shrink: 0;
         }
 
         .container {
+            flex-grow: 1;
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
+            align-items: flex-start;
+            overflow-y: auto; /* Allow vertical scrolling */
             padding: 1rem;
         }
 
