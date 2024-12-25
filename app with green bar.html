@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            overflow-x: hidden; /* Prevent horizontal overflow */
+        }
+
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 1rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 1rem;
+            width: 300px;
+            overflow: hidden;
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card:hover {
+            transform: scale(1.03);
+        }
+
+        .card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 1rem;
+            flex-grow: 1;
+        }
+
+        .course-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .course-skills {
+            font-size: 0.9rem;
+            color: #555;
+            margin-bottom: 1rem;
+        }
+
+        .course-rating {
+            display: flex;
+            align-items: center;
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        .course-rating span {
+            margin-left: 0.5rem;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+        }
+
+        .button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .button:hover {
+            background-color: #D22630; /* HSBC Red */
+        }
+
+        .degree-link {
+            font-size: 0.8rem;
+            color: #D22630; /* HSBC Red */
+            text-decoration: none;
+        }
+
+        .degree-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Custom scrollbar styling */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f4f4f9; /* Match the website's background */
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #4CAF50; /* Match the website's green theme */
+            border-radius: 5px;
+            border: 2px solid #f4f4f9; /* Add spacing around the thumb */
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: #D22630; /* Add HSBC Red for hover effect */
+        }
+    </style>
+</head>
+<body>
+    <div class="header">Online Courses Dashboard</div>
+
+    <div class="container">
+        <!-- Card 1 -->
+        <div class="card">
+            <img src="https://dl.dropboxusercontent.com/scl/fi/15s97mrf23mysneubwgc1/ai-for-daily-life.png?rlkey=ve7afjvq64nb2whg975zkfbpd&dl=0" alt="AI for Daily Life">
+            <div class="card-content">
+                <div class="course-title">AI for Daily Life</div>
+                <div class="course-skills">Skills you'll gain: AI Basics, Smart Home Integration, Automation</div>
+                <div class="course-rating">
+                    <span>&#9733; 4.8</span> <span>(25K reviews)</span>
+                </div>
+            </div>
+            <div class="card-footer">
+                <a href="#" class="degree-link"> Build toward a degree </a>
+                <button class="button"> View Course </button>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card">
+            <img src="https://dl.dropboxusercontent.com/scl/fi/j1vxd4ogzu5wxp9lwph0v/Deep_Learning_300-x150.png?rlkey=bervqexiztmo6fu70ipitsblj&dl=0" alt="Deep Learning Specialization">
+            <div class="card-content">
+                <div class="course-title">Deep Learning Specialization</div>
+                <div class="course-skills">Skills you'll gain: Neural Networks, Deep Learning, AI Applications</div>
+                <div class="course-rating">
+                    <span>&#9733; 4.8</span> <span>(145K reviews)</span>
+                </div>
+            </div>
+            <div class="card-footer">
+                <a href="#" class="degree-link"> Build toward a degree </a>
+                <button class="button"> View Course </button>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card">
+            <img src="https://dl.dropboxusercontent.com/scl/fi/f2hypg637w1h7a58m6gdh/hayong_76_A_modern_digital_illustration_representing_Quality_300x150.png?rlkey=9724h8t2hxh6kbrleenjz4hhu&dl=0" alt="Quality and Safety for LLM Applications">
+            <div class="card-content">
+                <div class="course-title">Quality and Safety for LLM Applications</div>
+                <div class="course-skills">Skills you'll gain: Quality Assurance, Safety Standards, Compliance</div>
+                <div class="course-rating">
+                    <span>&#9733; 4.6</span> <span>(2.7K reviews)</span>
+                </div>
+            </div>
+            <div class="card-footer">
+                <a href="#" class="degree-link"> Build toward a degree </a>
+                <button class="button"> View Course </button>
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="card">
+            <img src="https://dl.dropboxusercontent.com/scl/fi/rusb3321yhd4mokfvvfkx/professional_visual_representation_of_a_Python_300x150.png?rlkey=5ygwmsop6p1xazhlp99uqvban&dl=0" alt="Python Programming">
+            <div class="card-content">
+                <div class="course-title">Python Programming</div>
+                <div class="course-skills">Skills you'll gain: Python, Data Structures, Scripting</div>
+                <div class="course-rating">
+                    <span>&#9733; 4.7</span> <span>(50K reviews)</span>
+                </div>
+            </div>
+            <div class="card-footer">
+                <a href="#" class="degree-link"> Build toward a degree </a>
+                <button class="button"> View Course </button>
+            </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="card">
+            <img src="https://dl.dropboxusercontent.com/scl/fi/r3prj0koss3ggv3bqas6j/hayong_76_A_visually_engadepiction_of_cloud_computing.png?rlkey=rzlqf6fs7iq6xbneou4s5v1bp&dl=0" alt="Cloud Computing">
+            <div class="card-content">
+                <div class="course-title">Cloud Computing</div>
+                <div class="course-skills">Skills you'll gain: AWS, Google Cloud, Azure</div>
+                <div class="course-rating">
+                    <span>&#9733; 4.8</span> <span>(20K reviews)</span>
+                </div>
+            </div>
+            <div class="card-footer">
+                <a href="#" class="degree-link"> Build toward a degree </a>
+                <button class="button"> View Course </button>
+            </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="card">
+            <img src="https://dl.dropboxusercontent.com/scl/fi/w57w7kgglhivvpdwnds2e/Data_Scienc.png?rlkey=ia5hjinkhj37kalnx8mh8d7dm&dl=0" alt="Data Science Fundamentals">
+            <div class="card-content">
+                <div class="course-title">Data Science Fundamentals</div>
+                <div class="course-skills">Skills you'll gain: Data Analysis, Visualization, Statistics</div>
+                <div class="course-rating">
+                    <span>&#9733; 4.6</span> <span>(15K reviews)</span>
+                </div>
+            </div>
+            <div class="card-footer">
+                <a href="#" class="degree-link"> Build toward a degree </a>
+                <button class="button"> View Course </button>
+            </div>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="card">
+            <img src="https://dl.dropboxusercontent.com/scl/fi/a2x8aask1lqjzhylq8brj/cyber.png?rlkey=u0ic0vswhjiws5iqz3jpbx8yw&dl=0" alt="Cybersecurity Basics">
+            <div class="card-content">
+                <div class="course-title">Cybersecurity Basics</div>
+                <div class="course-skills">Skills you'll gain: Network Security, Threat Analysis</div>
+                <div class="course-rating">
+                    <span>&#9733; 4.5</span> <span>(10K reviews)</span>
+                </div>
+            </div>
+            <div class="card-footer">
+                <a href="#" class="degree-link"> Build toward a degree </a>
+                <button class="button"> View Course </button>
+            </div>
+        </div>
+
+        <!-- Card 8 -->
+        <div class="card">
+            <img src="https://dl.dropboxusercontent.com/scl/fi/j64hwighh2ohqawc657mo/ux_ui.png?rlkey=dmpzv2n13nny7igpugmbt44c1&dl=0" alt="UI/UX Design">
+            <div class="card-content">
+                <div class="course-title">UI/UX Design</div>
+                <div class="course-skills">Skills you'll gain: Wireframing, Prototyping, User Testing</div>
+                <div class="course-rating">
+                    <span>&#9733; 4.9</span> <span>(8K reviews)</span>
+                </div>
+            </div>
+            <div class="card-footer">
+                <a href="#" class="degree-link"> Build toward a degree </a>
+                <button class="button"> View Course </button>
+            </div>
+        </div>
+
+        <!-- Card 9 -->
+        <div class="card">
+            <img src="https://dl.dropboxusercontent.com/scl/fi/h50la8qpdaa4j9h6mqrax/block-chain.png?rlkey=34uv53xvtxwaq7jpch1wtf71x&dl=0/300x150" alt="Blockchain Basics">
+            <div class="card-content">
+                <div class="course-title">Blockchain Basics</div>
+                <div class="course-skills">Skills you'll gain: Cryptocurrency, Distributed Ledgers</div>
+                <div class="course-rating">
+                    <span>&#9733; 4.8</span> <span>(5K reviews)</span>
+                </div>
+            </div>
+            <div class="card-footer">
+                <a href="#" class="degree-link"> Build toward a degree </a>
+                <button class="button"> View Course </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
